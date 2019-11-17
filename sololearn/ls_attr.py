@@ -6,7 +6,7 @@ Created on 2018/06/06
 @author Lôc Cosnier
 
 List available modules and the functions associated
-Better to try within the Python shell or as a script and get a surprise :)
+Better to try within the Python shell or as a script
 """
 
 from pkgutil import iter_modules
