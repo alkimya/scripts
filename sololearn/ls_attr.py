@@ -16,7 +16,7 @@ from inspect import getmembers, isfunction
 #List available modules excluding those who begin by _ 
 for mod in iter_modules():
     if mod[1][0] != "_":
-        print(mod[1] + ": ", end="")
+        print(mod[1] + ": ", end = "")
         #For each module, try to import it to get all the functions associated
         #excluding those who begin by _
         try:
@@ -24,7 +24,7 @@ for mod in iter_modules():
             list = [x for x in getmembers(module, isfunction) if x[0][0] != "_"]
             if list != []:
                 for l in list:
-                    print(l[0] + ", ", end="")
+                    print(l[0] + ", ", end = "")
         except Exception as e:
             print(e)
         print("\n")
