@@ -5,7 +5,7 @@ Created on Fri Jun  8 13:38:16 2018
 
 @author: Lôc Cosnier
 
-Ask yourself a question
+Ask yourself a question. French version of the iching program.
 """
 
 from urllib.request import urlopen
@@ -15,7 +15,7 @@ import re
 
 diag = randint(1, 64)
 
-url = "http://wengu.tartarie.com/wg/wengu.php?l=Yijing&no=" + str(diag)
+url = "http://wengu.tartarie.com/wg/wengu.php?l=Yijing&lang=fr&no=" + str(diag)
 
 class Parser(HTMLParser):
     
