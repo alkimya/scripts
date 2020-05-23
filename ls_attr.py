@@ -13,18 +13,18 @@ from pkgutil import iter_modules
 from importlib import import_module
 from inspect import getmembers, isfunction
 
-#List available modules excluding those who begin by _ 
+# List available modules excluding those who begin by _
 for mod in iter_modules():
     if mod[1][0] != "_":
-        print(mod[1] + ": ", end = "")
-        #For each module, try to import it to get all the functions associated
-        #excluding those who begin by _
+        print(mod[1] + ": ", end="")
+        # For each module, try to import it to get all the functions associated
+        # excluding those who begin by _
         try:
             module = import_module(mod[1])
-            list = [x for x in getmembers(module, isfunction) if x[0][0] != "_"]
-            if list != []:
-                for l in list:
-                    print(l[0] + ", ", end = "")
+            fs = [x for x in getmembers(module, isfunction) if x[0][0] != "_"]
+            if fs != []:
+                for f in fs:
+                    print(f[0] + ", ", end="")
         except Exception as e:
             print(e)
         print("\n")
