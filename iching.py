@@ -37,6 +37,7 @@ class Parser(HTMLParser):
             self.prose = data
 
 
+input("Ask yourself a question and presse Enter ...")
 parser = Parser()
 text = urlopen(url).read().decode("big5")
 parser.feed(text)
